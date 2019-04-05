@@ -38,7 +38,7 @@ namespace MT
                         hostConfigurator.Password("guest");
                     });
 
-                    cfg.ReceiveEndpoint("test-queue", ep =>
+                    cfg.ReceiveEndpoint(host, "test-queue", ep =>
                     {
                         ep.ConfigureConsumer<TestEventConsumer>(provider);
                     });
